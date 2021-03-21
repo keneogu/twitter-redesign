@@ -1,11 +1,7 @@
 <%= form_with model: @user do |form| %>
   <%= form.label :username, "Username:" %>
-  <%= form.text_field :name %><br/><br/>
+  <%= form.text_field :username %><br/><br/>
   <%= form.label :fullname, "Fullname:" %>
   <%= form.text_field :fullname %><br/><br/>
-  <%= form.label :photo, "Add a photo:" %>
-  <%= form.file_field :photo %><br/><br/>
-  <%= form.label :cover_image, "Add a cover image:" %>
-  <%= form.file_field :cover_image %><br/><br/>
   <%= form.submit 'Register' %>
 <% end %>
