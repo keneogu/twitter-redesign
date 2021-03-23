@@ -2,6 +2,7 @@ class TweetsController < ApplicationController
   def index
     @tweets = Tweet.all.order("created_at DESC")
     @users = User.all
+    @tweet = Tweet.new
   end
 
   def new
@@ -17,7 +18,7 @@ class TweetsController < ApplicationController
 
     if @tweet.save
       flash[:notice] = 'New tweet created'
-      redirect_to tweets_index_path
+      redirect_to root_path
     else
       render :new
     end

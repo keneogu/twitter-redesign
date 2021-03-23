@@ -5,6 +5,6 @@
 <%= form_with model: @tweet do |f| %>
     <%= f.text_area :text, class: "form-control border-rounded", placeholder: "Let's Tweet Something nice"%>
     <br>
-    <%= f.button :Tweet,  class: "btn btn-primary d-flex justify-content-end" %>
+    <%= f.submit class: "btn btn-primary d-flex justify-content-end" %>
 <% end %>
 </div>
