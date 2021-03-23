@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       flash[:notice] = 'Sign Up Successfully'
-      redirect_to new_session_path
+      redirect_to tweets_path
     else
       flash[:notice] = 'Username already exists OR Username is blank'
       render :new

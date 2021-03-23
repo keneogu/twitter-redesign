@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     if @user
       session[:user_id] = @user.id
       flash[:success] = 'Logged in successfully'
-      redirect_to tweets_index_path(@user)
+      redirect_to tweets_path(@user)
     else
       flash.now[:notice] = 'Please enter valid username'
       render 'new'
@@ -17,6 +17,6 @@ class SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
     flash[:notice] = 'Logged Out'
-    redirect_to root_path
+    redirect_to new_session_path
   end
 end

@@ -2,15 +2,18 @@
 <% @users.each do |user| %>
     <% unless current_user==user%>
     <div class="d-flex justify-content-center">
+    <span class="avatar"><%= avatar_for(user)%></span>
     <div class="col-6">
+      <span>
       <strong><%=link_to user.fullname, user_path(user)%></strong>
       <br>
       <small>@<%= user.username %></small>
+      </span>
     </div>
-      <div class="col-6">
+      <div class="col-4">
         <%=  %>
       </div>
     </div>
     <hr>
   <%end%>
-  <%end%>
+<%end%>
