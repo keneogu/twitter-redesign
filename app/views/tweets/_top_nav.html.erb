@@ -1,0 +1,7 @@
+<div class="d-flex justify-content-between top_nav">
+   <p class="logo pt-4 pl-3 text-uppercase"><a class="font-italic text-light font-weight-bolder">FashionTalks</a></p>
+   <p class="d-flex justify-content-end pt-4">
+	  <strong ><%= link_to current_user.fullname, current_user, class: "text-light pr-3" %></strong><br />
+	  <strong ><%= link_to 'Log out', session_path('current_user'), class: "text-light pr-4", method: :delete %></strong>
+	</p>
+</div>
