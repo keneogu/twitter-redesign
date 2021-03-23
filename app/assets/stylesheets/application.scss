@@ -13,4 +13,20 @@
  *= require_tree .
  *= require_self
  */
+ *{
+   margin: 0;
+   padding: 0;
+ }
+
+ .left_nav {
+   background-color: #030E24;
+   height: 100vh;
+ }
+
+ .top_nav {
+	background-color: dodgerblue;
+	height: 10vh;
+	width: 100%;
+ }
+
 

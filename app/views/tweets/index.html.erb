@@ -1,13 +1,14 @@
-	<div class="d-flex flex-row">
+	<div class="d-flex flex-row no-gutters">
 
-		<div class="col-2 bg-success" style="height: 100vh; ">
-		  <%= render 'tweets/left_nav' %>
-		  <h2>Hi this is side bar</h2>
+		<div class="col-2">
+		  <%= render 'left_nav' %>
 		</div>
 
-		<div class="col-10 bg-secondary">
-		  <%= render 'top_nav' %>
-          <%= render 'form' %>
+		<div class="col-10">
+		 <%= render 'top_nav' %>
+		  <div>
+		   <%= render 'form' %>
+		  </div>
 		</div>
 
 	</div>
