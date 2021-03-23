@@ -1,0 +1,6 @@
+		
+		<h1>all tweets</h1>
+		<% @tweets.each do |t| %>
+		<%= t.author.username %>
+		<%= t.text %>
+		<% end %>
