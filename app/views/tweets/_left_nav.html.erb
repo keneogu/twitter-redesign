@@ -1,14 +1,14 @@
 <div class="left_nav text-secondary  px-2 pt-3">
       <div class="d-flex text-center">
        <div class="profile-users">
-          <%# <%= avatar_for(current_user)%>
+          <%= avatar_for(current_user) %>
 		</div>
 		<div class="profile-name pt-4 pl-3">
-		  <%=current_user.fullname%>
+		  <%= current_user.fullname %>
 		</div>
 	  </div>
-		<div class="d-flex pt-4">
-		 
+		<div class="d-block pt-4">
+		  <%= render 'stat' %>
 		  <strong class="pr-3"><i class="fas fa-home"></i><%= link_to 'Homepage', root_path, class: "text-secondary"%></strong><br />
 		  <br>
 	      <strong class="pr-3"><i class="fas fa-user"></i><%= link_to 'Profile', current_user, class: "text-secondary"%></strong><br />

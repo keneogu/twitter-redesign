@@ -1,0 +1,13 @@
+<% @user ||= current_user %>
+<div class="stats d-flex justify-content-between text-center">
+	<div id="following" class="stat">
+	 <p class="font-weight-bold"><%= @user.following.count %></p>
+      <p class="font-weight-bold">following</p>
+	</div>
+	</a>
+	<div id="followers" class="stat">
+	<p class="font-weight-bold"><%= @user.followers.count %></p>
+	<p class="font-weight-bold">followers</p>
+	</div>
+	</a>
+</div>
