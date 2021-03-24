@@ -6,9 +6,12 @@ Rails.application.routes.draw do
 
   resources :users, only: %i[show] do
     member do
-      get :following, :followers
+      post :followings, :followers
     end
+    resources :relationships, only: [:create]
   end
-  resources :relationships, only: [:create, :destroy]
+
+  resources :relationships, only: [:destroy]
+  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
