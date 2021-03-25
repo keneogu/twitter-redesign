@@ -46,6 +46,7 @@ group :development do
   gem 'rspec-rails'
   gem 'rubocop'
   gem 'shoulda-matchers', '~> 4.5', '>= 4.5.1'
+  gem 'spring'
 end
 
 group :test do

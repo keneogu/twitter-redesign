@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  skip_before_action :authenticate_user, only: %i[new create] 
   def index
     @users = User.all.order('created_at DESC')
   end
