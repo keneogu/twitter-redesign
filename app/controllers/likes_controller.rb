@@ -1,6 +1,6 @@
 class LikesController < ApplicationController
 	def create
-		@like = current_user.likes.new(post_id: params[:post_id])
+		@like = current_user.likes.new(tweet_id: params[:tweet_id])
 	
 		if @like.save
 		  redirect_to tweets_path
@@ -10,7 +10,7 @@ class LikesController < ApplicationController
 	  end
 	
 	  def destroy
-		like = Like.find_by(id: params[:id], user: current_user, post_id: params[:post_id])
+		like = Like.find_by(id: params[:id], user: current_user, tweet_id: params[:tweet_id])
 		if like
 		  like.destroy
 		  redirect_to tweets_path
