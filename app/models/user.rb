@@ -10,6 +10,7 @@ class User < ApplicationRecord
 	has_many :likes, dependent: :destroy
 
 	validates :username, presence: true, uniqueness: true, length: { maximum: 20 }
+	validates :fullname, presence: true, length: { maximum: 100}
 
 	def follow(other_user)
 		active_relationships.create(followed_id: other_user.id)
