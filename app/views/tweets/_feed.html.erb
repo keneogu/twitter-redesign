@@ -1,10 +1,12 @@
-<% @tweets.each do |t| %>
+<% @tweets.each do |tweet| %>
    <div class="d-block ">
    <div class="d-flex justify-content-between">
-   <p><%= t.author.username %></p>
-	<p><%= t.created_at.strftime("#{t.created_at.day.ordinalize} %B %Y") %></p>
+   <p><%= tweet.author.username %></p>
+	<p><%= tweet.created_at.strftime("#{tweet.created_at.day.ordinalize} %B %Y") %></p>
    </div>
 
-	<p><%= t.text %></p>
+	<p><%= tweet.text %></p>
+   <%=like_or_dislike_btn(tweet)%>
+   <span class="text-primary"><%= likes_count(tweet) %></span>
 	</div>
 <% end %>
