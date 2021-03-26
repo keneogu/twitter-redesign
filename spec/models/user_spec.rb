@@ -22,7 +22,6 @@ RSpec.describe User, type: :model do
   end
 
   describe 'validations' do
-
     it { is_expected.to validate_presence_of(:username) }
 
     it { is_expected.to validate_length_of(:username).is_at_most(20) }

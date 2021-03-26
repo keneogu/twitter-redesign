@@ -1,5 +1,5 @@
 module TweetsHelper
-	def likes_count(tweet)
-		tweet.likes
-	  end
+  def likes_count(tweet)
+    tweet.likes
+  end
 end

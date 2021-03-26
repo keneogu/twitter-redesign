@@ -2,7 +2,7 @@
    <div class="d-block index-feed">
    <div class="d-flex justify-content-between border-bottom">
    <div class="profile-users d-flex">
-      <span class="avatar"><%= avatar_for(@user)%></span>
+      <span class="avatar"><%= avatar_for(tweet.author)%></span>
       <p class="pl-2 pt-1"><%= tweet.author.username %></p>
 	</div>
 	<p><%= tweet.created_at.strftime("#{tweet.created_at.day.ordinalize} %B %Y") %></p>

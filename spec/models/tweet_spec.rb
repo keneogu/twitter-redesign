@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Tweet, type: :model do
-
   it 'is invalid without a text' do
     tweet = Tweet.create(text: '')
     expect(tweet).not_to be_valid

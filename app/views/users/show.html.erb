@@ -42,6 +42,9 @@
                             <small>@<%= @user.username %></small>
                         </p>
 					</div>
+				<div>
+				  <%= follow_button(@user)%>
+				</div>
                 <div class="followings border-top border-bottom">
                 <div class="d-flex justify-content-center">
                     <div class="px-3">
@@ -58,9 +61,6 @@
                     </div>
                 </div>
                 </div>
-				<div>
-				  <%= follow_button(@user)%>
-				</div>
 				 <div class="mt-4">
                     <p class="heading text-uppercase">Followed by</p>
 					<hr>
