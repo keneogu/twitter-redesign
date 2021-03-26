@@ -53,8 +53,6 @@ Visit this [link](https://intense-earth-31445.herokuapp.com/)
 ## Run tests
 
 - Run `bundle exec rspec` to run all the tests, or
-- Run `bundle exec guard` to start the guard server. The tests run when the test
-  files are saved.
 
 ## Deployment
 
