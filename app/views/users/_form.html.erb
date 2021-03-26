@@ -1,7 +1,30 @@
-<%= form_with model: @user do |form| %>
-  <%= form.label :username, "Username:" %>
-  <%= form.text_field :username %><br/><br/>
-  <%= form.label :fullname, "Fullname:" %>
-  <%= form.text_field :fullname %><br/><br/>
-  <%= form.submit 'Register' %>
-<% end %>
+<section class="sec">
+  <div class="imgBx">
+    <%=  image_tag("book1.png", :alt => "book_image", class: "img") %>
+    <div class="in-imgBx">
+      <h2 class="font-weight-bolder font-weight-bolder font-italic">Welcome to twitter for books</h2>
+      <p class="text-center">The kind of books you read says alot about you</p>
+    </div>
+  </div>
+  <div class="contentBx">
+    <div class="formBx">
+    <%= form_with model: @user do |form| %>
+      <h2>Sign Up</h2>
+      <div class="inputBx">
+        <span><%= form.label :username, "Username:" %></span>
+        <%= form.text_field :username, class:"input" %><br/><br/>
+      </div>
+      <div class="inputBx">
+        <span><%= form.label :fullname, "Fullname:" %></span>
+        <%= form.text_field :fullname, class:"input" %><br/><br/>
+      </div>
+      <div class="inputBx">
+        <%= form.submit 'Sign Up', class:"input" %>
+      </div>
+      <div class="inputBx d-inline">
+        <p class="pt-2 text-center">Already have an account? <%= link_to 'Sign up', new_session_path %></p>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</section>
