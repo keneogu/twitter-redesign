@@ -18,12 +18,26 @@
    padding: 0;
    box-sizing: border-box;
  }
-
+.main {
+  background-color: #e5e7eb86;
+}
  .left_nav {
+   position: fixed;
+   width: 225px;
    background-color: #030E24;
    height: 100vh;
  }
-
+ .index-form {
+   border-radius: 25px;
+ }
+ .in-content {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+ }
+ .index-feed {
+  padding: 20px 40px;
+  margin-bottom: 2%;
+  border-top: 2px solid rgba(173, 173, 173, 0.274);
+ }
  .top_nav {
 	background-color: dodgerblue;
 	height: 10vh;

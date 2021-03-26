@@ -1,7 +1,10 @@
 <% @tweets.each do |tweet| %>
-   <div class="d-block ">
-   <div class="d-flex justify-content-between">
-   <p><%= tweet.author.username %></p>
+   <div class="d-block index-feed">
+   <div class="d-flex justify-content-between border-bottom">
+   <div class="profile-users d-flex">
+      <span class="avatar"><%= avatar_for(@user)%></span>
+      <p class="pl-2 pt-1"><%= tweet.author.username %></p>
+	</div>
 	<p><%= tweet.created_at.strftime("#{tweet.created_at.day.ordinalize} %B %Y") %></p>
    </div>
 

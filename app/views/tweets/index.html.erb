@@ -1,4 +1,4 @@
-	<div class="d-flex flex-row no-gutters bg-light">
+	<div class="d-flex flex-row no-gutters main">
 
 		<div class="col-2">
 		  <%= render 'left_nav' %>
@@ -7,18 +7,24 @@
 		<div class="col-10">
 		 <%= render 'top_nav' %>
 		  <div class="d-flex flex-row no-gutters">
-		   <div class="col-9">
-		   <div class="mx-auto bg-white rounded">
+		   <div class="col-8">
+		   <ul class="mt-2 ml-2">
+		     <li><a href="#" class="border-bottom text-dark p-2 border-primary">Tweet</a></li>
+		   </ul>
+		   <div class="content mx-4">
+		   <div class="bg-white index-form in-content">
 		   <%= render 'form' %>
 		   </div>
 
-		   <div class="mx-auto bg-white w-75 mt-5">
+		   <div class="bg-white mt-3 in-content border rounded">
 		     <%= render 'feed' %>
 		   </div>
-		   
 		   </div>
-		   <div class="col-3 bg-white rounded mt-4">
+		   </div>
+		   <div class="col-4">
+		   <div class="bg-white rounded m-3 in-content">
 		    <%= render 'who-to-follow' %>
+		   </div>
 		   </div>
 		  </div>
 		</div>

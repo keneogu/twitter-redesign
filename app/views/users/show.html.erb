@@ -7,21 +7,24 @@
 		<div class="col-10">
 		 <%= render 'tweets/top_nav' %>
 		  <div class="d-flex flex-row no-gutters">
-		   <div class="col-9">
+		   <div class="col-8">
 
 		   <div class="w-100 h-25">
-		     <%=  image_tag("witch.jpg", :alt => "witch_image", class: "w-100 h-100") %>
+		     <%=  image_tag("book2.png", :alt => "book", class: "w-100 h-100") %>
 		   </div>
 
 		   <ul class="mt-2 ml-2">
 		     <li><a href="#" class="border-bottom text-dark p-2 border-primary">Tweet</a></li>
 		   </ul>
 
-				<div class="mx-auto bg-white w-75 mt-2">
+				<div class="bg-white mt-2 mx-4 border rounded in-content">
 					<% @user.tweets.each do |t| %>
-						<div class="d-block ">
+						<div class="d-block border-bottom p-4">
 						<div class="d-flex justify-content-between">
-						<p><%= t.author.username %></p>
+							<div class="profile-users d-flex ">
+								<span class="avatar"><%= avatar_for(@user)%></span>
+								<p class="pl-2 pt-1"><%= t.author.username %></p>
+							</div>
 							<p><%= t.created_at.strftime("#{t.created_at.day.ordinalize} %B %Y") %></p>
 						</div>
 
@@ -30,13 +33,16 @@
 						<% end %>
 				</div>
 		   </div>
-		   <div class="col-3 bg-white rounded text-center pt-3">
+		   <div class="col-4">
+		   <div class="bg-white rounded m-3 text-center in-content">
+		           <div class="pt-2">
                         <%= avatar_for(@user)%>
                         <p class="">
                             <strong><%= @user.fullname.upcase %></strong><br />
                             <small>@<%= @user.username %></small>
                         </p>
-                <div class="followings ">
+					</div>
+                <div class="followings border-top border-bottom">
                 <div class="d-flex justify-content-center">
                     <div class="px-3">
 					    <p class=""><%=@user.tweets.count%></p>
@@ -46,8 +52,7 @@
 					<p class=""><%=@user.followings.count%></p>
                         <p class="">Followings</p>
                     </div>
-                    <div class=">
-                    <div>
+                    <div class="px-3">
 					    <p class=""><%=@user.followers.count%></p>
                         <p class="">Followers</p>
                     </div>
