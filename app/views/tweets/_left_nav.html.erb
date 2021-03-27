@@ -3,14 +3,14 @@
        <div class="profile-users">
           <%= avatar_for(current_user) %>
 		</div>
-		<div class="profile-name pt-4 pl-3">
+		<div class="profile-name pl-1 pt-2">
 		  <%= current_user.fullname %>
 		</div>
 	  </div>
 		<div class="d-block pt-4">
 		  <%= render 'tweets/stat' %>
-		  <strong class="pr-3"><i class="fas fa-home"></i><%= link_to 'Homepage', tweets_path, class: "text-secondary"%></strong><br />
+		  <strong class="pr-3 ml-2"><i class="fa fa-home"></i><%= link_to 'Homepage', tweets_path, class: "text-secondary pl-2"%></strong><br />
 		  <br>
-	      <strong class="pr-3"><i class="fas fa-user"></i><%= link_to 'Profile', current_user, class: "text-secondary"%></strong><br />
+	      <strong class="pr-3 ml-2"><i class="fa fa-user"></i><%= link_to 'Profile', current_user, class: "text-secondary pl-2"%></strong><br />
         </div>
 </div>

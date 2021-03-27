@@ -9,15 +9,16 @@
 		  <div class="d-flex flex-row no-gutters">
 		   <div class="col-8">
 
-		   <div class="w-100 h-25">
-		     <%=  image_tag("book2.png", :alt => "book", class: "w-100 h-100") %>
+		   <div class="w-100">
+		     <%=  image_tag("book2.png", :alt => "book", class: "w-100 p-img") %>
 		   </div>
 
-		   <ul class="mt-2 ml-2 list-unstyled">
-		     <li><a href="#" class="border-bottom text-dark p-2 border-primary">Tweet</a></li>
-		   </ul>
+		  
+		   <span class="border-bottom text-dark p-2 border-primary">Tweet</span><br />
+		
+		
 
-				<div class="bg-white mt-2 mx-4 border rounded in-content">
+				<div class="bg-white mt-4 mx-4 border rounded in-content">
 					<% @user.tweets.each do |t| %>
 						<div class="d-block border-bottom p-4">
 						<div class="d-flex justify-content-between">
