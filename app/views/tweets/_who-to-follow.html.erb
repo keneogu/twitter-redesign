@@ -2,7 +2,6 @@
 <h4 class="text-muted mx-3 pt-2">who to follow</h4>
 <hr class="mx-3">
 <% @follow_suggestions.each do |user| %>
-    <% unless current_user==user%>
     <div class="d-flex justify-content-center">
     <span class="avatar"><%= avatar_for(user)%></span>
     <div class="col-6">
@@ -17,6 +16,5 @@
       </div>
     </div>
     <hr class="mx-3">
-  <%end%>
 <%end%>
 </div>
