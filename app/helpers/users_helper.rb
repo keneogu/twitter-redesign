@@ -16,10 +16,10 @@ module UsersHelper
   end
 
   def tag_picture(user)
-		if user.profile_pic.attached?
-		  image_tag user.profile_pic, class: 'tag_profile'
-		else
-		  avatar_for(user)
-		end
-	  end
+    if user.profile_pic.attached?
+      image_tag user.profile_pic, class: 'tag_profile'
+    else
+      avatar_for(user)
+    end
+  end
 end
