@@ -43,12 +43,15 @@ Visit this [link](https://intense-earth-31445.herokuapp.com/)
 
 ## Getting Started
 
-- Clone the repo `https://github.com/keneogu/twitter-redesign`
+- Open your `Terminal`
+- Navigate to the directory where you will like to install the repo by running `cd Folder Name`
+- Run `git clone git@github.com:keneogu/twitter-redesign.git`
 - `cd` into the project
 - Run `git pull origin feature-branch`
 - Run `bundle install`
-- Setup your `db` in the `database.yml` and run `rails db:setup`
-- Run `rails s` and visit `localhost:3000`
+- Run `rails db:create` to create your database
+- Run `rails db:migrate` to migrate your database
+- Run `rails s` and visit `localhost:3000` in your browser
 
 ## Run tests
 
