@@ -9,6 +9,9 @@ class User < ApplicationRecord
 
   has_many :likes, dependent: :destroy
 
+  has_one_attached :profile_pic
+  has_one_attached :cover_pic
+
   validates :username, presence: true, uniqueness: true, length: { maximum: 20 }
   validates :fullname, presence: true, length: { maximum: 100 }
 
