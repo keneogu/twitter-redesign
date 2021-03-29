@@ -12,11 +12,17 @@ class User < ApplicationRecord
   validates :username, presence: true, uniqueness: true, length: { maximum: 20 }
   validates :fullname, presence: true, length: { maximum: 100 }
 
+  scope :ordered_by_most_recent, -> { order(created_at: :desc) }
+
   def follow(other_user)
     active_relationships.create(followed_id: other_user.id)
   end
 
   def unfollow(other_user)
     active_relationships.find_by(followed_id: other_user.id).destroy
+  end
+
+  def not_following
+    User.where.not(id: followings.pluck(:id)).where.not(id: id)
   end
 end

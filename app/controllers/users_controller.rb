@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   skip_before_action :authenticate_user, only: %i[new create]
   def index
-    @users = User.all.order('created_at DESC')
+    @users = User.all.ordered_by_most_recent
   end
 
   def new

@@ -1,8 +1,9 @@
 class TweetsController < ApplicationController
   def index
     @tweets = Tweet.includes(:author).ordered_by_most_recent
-    @users = User.all
+    @users = User.all.ordered_by_most_recent
     @tweet = Tweet.new
+    @follow_suggestions = current_user.not_following.ordered_by_most_recent
   end
 
   def new
