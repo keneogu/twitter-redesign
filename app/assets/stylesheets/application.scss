@@ -23,18 +23,36 @@
 }
 
 .main {
+  position: relative;
   background-color: #e5e7eb86;
 }
 
 .left_nav {
   position: fixed;
-  width: 225px;
+  width: 15%;
   background-color: #030e24;
   height: 100vh;
+  z-index: 1;
+}
+
+.right_side {
+  margin-left: 15%;
 }
 
 .index-form {
   border-radius: 25px;
+}
+
+.profile {
+  height: 80px;
+  width: 80px;
+  border-radius: 100%;
+}
+
+.tag_profile {
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
 }
 
 .in-content {
@@ -59,8 +77,8 @@
 }
 
 .avatar img {
-  height: 30px;
-  width: 30px;
+  height: 50px;
+  width: 50px;
 }
 
 .sec {

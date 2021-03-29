@@ -19,6 +19,14 @@
         <%= form.text_field :fullname, class:"input" %><br/><br/>
       </div>
       <div class="inputBx">
+        <span><%= form.label :profile_pic, "Profile Photo:" %></span>
+        <%= form.file_field :profile_pic, class:"input" %><br/><br/>
+      </div>
+      <div class="inputBx">
+        <span><%= form.label :cover_pic, "Cover Photo" %></span>
+        <%= form.file_field :cover_pic, class:"input" %><br/><br/>
+      </div>
+      <div class="inputBx">
         <%= form.submit 'Sign Up', class:"input" %>
       </div>
       <div class="inputBx d-inline">

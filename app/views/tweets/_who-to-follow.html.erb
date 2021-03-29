@@ -3,7 +3,7 @@
 <hr class="mx-3">
 <% @follow_suggestions.each do |user| %>
     <div class="d-flex justify-content-center">
-    <span class="avatar"><%= avatar_for(user)%></span>
+    <span class="avatar"><%= tag_picture(user)%></span>
     <div class="col-6">
       <span>
       <strong><%=link_to user.fullname, user_path(user)%></strong>
