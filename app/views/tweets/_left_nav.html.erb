@@ -1,0 +1,16 @@
+<div class="left_nav text-secondary  px-2 pt-3">
+      <div class="d-flex text-center mx-auto align-items-center justify-content-around">
+       <div class="profile-users">
+	   <%= profile_picture(current_user) %>
+		</div>
+		<div class="pl-1">
+		  <%= current_user.fullname %>
+		</div>
+	  </div>
+		<div class="d-block pt-4">
+		  <%= render 'tweets/stat' %>
+		  <strong class="pr-3 ml-2"><i class="fa fa-home"></i><%= link_to 'Homepage', tweets_path, class: "text-secondary pl-2"%></strong><br />
+		  <br>
+	      <strong class="pr-3 ml-2"><i class="fa fa-user"></i><%= link_to 'Profile', current_user, class: "text-secondary pl-2"%></strong><br />
+        </div>
+</div>

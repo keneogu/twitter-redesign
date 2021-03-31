@@ -1,0 +1,84 @@
+	<div class="d-flex flex-row no-gutters">
+
+		<div class="">
+		  <%= render 'tweets/left_nav' %>
+		</div>
+
+		<div class="right_side w-100">
+		 <%= render 'tweets/top_nav' %>
+		  <div class="d-flex flex-row no-gutters">
+		   <div class="col-8">
+          
+
+		   <div class="w-100">
+			<%= cover_picture(@user) %>
+		   </div>
+           
+		  
+		   <span class="border-bottom text-dark p-2 border-primary">Tweet</span><br />
+		
+		
+
+				<div class="bg-white mt-4 mx-4 rounded in-content">
+					<% @user.tweets.each do |t| %>
+						<div class="d-block border-bottom p-4">
+						<div class="d-flex justify-content-between border-bottom pb-2">
+							<div class="profile-users d-flex ">
+								<span class="avatar"><%= tag_picture(t.author)%></span>
+								<p class="pl-2 pt-3"><%= t.author.username %></p>
+							</div>
+							<p><%= t.created_at.strftime("#{t.created_at.day.ordinalize} %B %Y") %></p>
+						</div>
+
+							<p><%= t.text %></p>
+							</div>
+						<% end %>
+				</div>
+		   </div>
+		   <div class="col-4">
+		   <div class="bg-white rounded m-3 text-center in-content">
+		           <div class="pt-2">
+                        <%= profile_picture(@user) %>
+                        <p class="">
+                            <strong><%= @user.fullname.upcase %></strong><br />
+                            <small>@<%= @user.username %></small>
+                        </p>
+					</div>
+				<div>
+				  <%= follow_button(@user)%>
+				</div>
+                <div class="followings border-top border-bottom">
+                <div class="d-flex justify-content-center">
+                    <div class="px-3">
+					    <p class=""><%=@user.tweets.count%></p>
+                        <p class="">Tweets</p>
+                    </div>
+                    <div class="px-3">
+					<p class=""><%=@user.followings.count%></p>
+                        <p class="">Followings</p>
+                    </div>
+                    <div class="px-3">
+					    <p class=""><%=@user.followers.count%></p>
+                        <p class="">Followers</p>
+                    </div>
+                </div>
+                </div>
+				 <div class="mt-4">
+                    <p class="heading text-uppercase">Followed by</p>
+					<hr>
+                    <%@user.followers.each do |follower|%>
+					  <div class="">
+					  <p><%= follower.fullname%></p>
+					  <small>@<%= follower.username %></small>
+						  <hr>
+                    <%end%>
+                </div>
+		   </div>
+		  </div>
+		</div>
+
+	</div>
+
+
+
+

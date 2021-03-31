@@ -1,0 +1,15 @@
+<% @tweets.each do |tweet| %>
+   <div class="d-block index-feed">
+   <div class="d-flex justify-content-between border-bottom pb-2">
+   <div class="d-flex align-items-center">
+      <span class="avatar"><%= tag_picture(tweet.author)%></span>
+      <p class="pl-2 pt-3"><%= tweet.author.username %></p>
+	</div>
+	<p><%= tweet.created_at.strftime("#{tweet.created_at.day.ordinalize} %B %Y") %></p>
+   </div>
+
+	<p><%= tweet.text %></p>
+   <%=like_or_dislike_btn(tweet)%>
+   <span class="text-primary"><%= likes_count(tweet) %></span>
+	</div>
+<% end %>

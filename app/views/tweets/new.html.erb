@@ -1,0 +1,11 @@
+<div class="col-2 position-fixed bg-success" style="height: 100vh;">
+		  <%= render 'left_nav' %>
+		</div>
+
+		<div class="col-10 bg-secondary">
+		<h1>all tweets</h1>
+		<% @tweets.each do |t| %>
+		<%= t.author.username %>
+		<%= t.text %>
+		<% end %>
+		</div>

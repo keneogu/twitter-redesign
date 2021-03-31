@@ -1,0 +1,9 @@
+<div class="d-flex justify-content-between top_nav sticky-top">
+
+      <%=  image_tag("book_logo.png", :alt => "book_image", class: "h-100 w-15") %>
+
+   <p class="d-flex justify-content-end pt-4">
+	  <strong ><%= link_to current_user.fullname, current_user, class: "text-light pr-3" %></strong><br />
+	  <strong ><%= link_to 'Log out', session_path('current_user'), class: "text-light pr-4", method: :delete %></strong>
+	</p>
+</div>

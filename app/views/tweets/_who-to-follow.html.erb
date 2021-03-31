@@ -1,0 +1,20 @@
+<div class="mt-2">
+<h4 class="text-muted mx-3 pt-2">who to follow</h4>
+<hr class="mx-3">
+<% @follow_suggestions.each do |user| %>
+    <div class="d-flex justify-content-center">
+    <span class="avatar"><%= tag_picture(user)%></span>
+    <div class="col-6">
+      <span>
+      <strong><%=link_to user.fullname, user_path(user)%></strong>
+      <br>
+      <small>@<%= user.username %></small>
+      </span>
+    </div>
+      <div class="col-4">
+        <%= follow_button(user) %>
+      </div>
+    </div>
+    <hr class="mx-3">
+<%end%>
+</div>

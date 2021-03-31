@@ -1,0 +1,10 @@
+<div class="fill_form p-4">
+<div class="tweet_header text-dark d-flex">
+   <p class="">TWEET SOMETHING</p>
+</div>
+<%= form_with model: @tweet do |f| %>
+    <%= f.text_area :text, class: "form-control rounded-pill", placeholder: "Let's Tweet Something nice"%>
+    <br>
+    <%= f.submit class: "btn btn-primary btn-sm" %>
+<% end %>
+</div>

@@ -1,0 +1,176 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.main {
+  position: relative;
+  background-color: #e5e7eb86;
+}
+
+.left_nav {
+  position: fixed;
+  width: 15%;
+  background-color: #030e24;
+  height: 100vh;
+  z-index: 1;
+}
+
+.right_side {
+  margin-left: 15%;
+}
+
+.index-form {
+  border-radius: 25px;
+}
+
+.profile {
+  height: 80px;
+  width: 80px;
+  border-radius: 100%;
+}
+
+.tag_profile {
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+}
+
+.in-content {
+  width: auto;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.p-img {
+  height: 200px;
+}
+
+.index-feed {
+  padding: 20px 40px;
+  margin-bottom: 2%;
+  border-top: 2px solid rgba(173, 173, 173, 0.274);
+}
+
+.top_nav {
+  background-color: dodgerblue;
+  height: 10vh;
+  width: 100%;
+}
+
+.avatar img {
+  height: 50px;
+  width: 50px;
+}
+
+.sec {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.imgBx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+
+.imgBx::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(225deg, #000a1f, #03a9f4);
+  z-index: 1;
+  mix-blend-mode: screen;
+}
+
+.imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.in-imgBx {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  z-index: 2;
+  color: #030e24;
+}
+
+.contentBx {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+.formBx h2 {
+  color: #030e24;
+  font-weight: 600;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  border-bottom: 4px solid dodgerblue;
+  display: inline-block;
+  letter-spacing: 1px;
+}
+
+.inputBx span {
+  margin-bottom: 5px;
+  display: inline-block;
+  color: dodgerblue;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 20px;
+  outline: none;
+  font-weight: 400;
+  border: 1px solid #030e24;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #030e24;
+  background: transparent;
+  border-radius: 30px;
+}
+
+.input[type="submit"] {
+  background: #030e24;
+  color: #fff;
+  outline: none;
+  font-weight: 500;
+}
+
+.input[type="submit"]:hover {
+  background: #041841;
+}

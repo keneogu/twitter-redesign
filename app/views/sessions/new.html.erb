@@ -1,0 +1,27 @@
+<section class="sec">
+  <div class="imgBx">
+    <%=  image_tag("book1.png", :alt => "book_image", class: "img") %>
+    <div class="in-imgBx">
+      <h2 class="font-weight-bolder font-weight-bolder font-italic">Welcome to twitter for books</h2>
+      <p class="text-center">The kind of books you read says alot about you</p>
+    </div>
+  </div>
+  <div class="contentBx">
+    <div class="formBx">
+      <h2>Login</h2>
+	  <%= form_with url: sessions_path do |form| %>
+      <div class="inputBx">
+        <span><%= form.label :username, "Username:" %></span>
+        <%= form.text_field :username, class:"input" %><br/><br/>
+      </div>
+      <div class="inputBx">
+        <%= form.submit 'Login', class:"input" %>
+      </div>
+      <div class="inputBx d-inline">
+        <p class="pt-2 text-center">Don't have an account? <%= link_to 'Sign up', new_user_path %></p>
+      </div>
+	  <% end %>
+    </div>
+  </div>
+</section>
+

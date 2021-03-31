@@ -1,0 +1,32 @@
+	<div class="d-flex flex-row no-gutters main">
+
+		
+		  <%= render 'left_nav' %>
+		
+
+		<div class="right_side w-100">
+		 <%= render 'top_nav' %>
+		  <div class="d-flex flex-row no-gutters">
+		   <div class="col-8">
+		   <span class="border-bottom text-dark p-2 border-primary">Tweet</span><br />
+		   <div class="content mx-4 mt-4">
+		   <div class="bg-white index-form in-content">
+		   <%= render 'form' %>
+		   </div>
+
+		   <div class="bg-white mt-3 in-content rounded">
+		     <%= render 'feed' %>
+		   </div>
+		   </div>
+		   </div>
+		   <div class="col-4">
+		   <div class="bg-white rounded m-3 in-content">
+		    <%= render 'who-to-follow' %>
+		   </div>
+		   </div>
+		  </div>
+		</div>
+
+	</div>
+
+
