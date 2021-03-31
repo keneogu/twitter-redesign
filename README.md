@@ -66,7 +66,7 @@ This project is hosted on heroku.
 - `heroku buildpacks:add heroku/ruby --index 2`
 - `git push heroku main`
 
-## Authors
+## Author
 
 ### Kenechukwu Oguagbaka
 
